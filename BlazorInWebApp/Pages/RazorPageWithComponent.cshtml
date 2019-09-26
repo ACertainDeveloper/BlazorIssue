@@ -1,0 +1,19 @@
+﻿@page
+@model BlazorInWebApp.Pages.RazorPageWithComponentModel
+@{
+    ViewData["Title"] = "Razor Page With Component";
+    Layout = "~/Pages/Shared/_LayoutWithComponent.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Component in Layout</h1>
+    <p>With a component in the layout the blazor components do not respond. Check the browser console for error details.</p>
+
+
+</div>
+<div id="count">
+    @(await Html.RenderComponentAsync<Components.Count>(RenderMode.ServerPrerendered))
+</div>
+@(await Html.RenderComponentAsync<Components.Count>(RenderMode.ServerPrerendered))
+
+

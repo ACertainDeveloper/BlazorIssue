@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@using Components;
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">No Component in Layout</h1>
+    <p>With no component in the layout the applicatoion works as expected</p>
+
+
+</div>
+<div id="count">
+    @(await Html.RenderComponentAsync<Count>(RenderMode.ServerPrerendered))
+</div>
+ @(await Html.RenderComponentAsync<Count>(RenderMode.ServerPrerendered))
+
